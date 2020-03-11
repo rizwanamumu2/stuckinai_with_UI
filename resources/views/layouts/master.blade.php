@@ -27,6 +27,13 @@
 
 <body>
     
+   
+
+<div class="spinner_wrapper" id="spinner_wrapper">
+  
+  <div class="spinner"></div>
+
+</div>
     @include('layouts.header')
 
     @yield('content')
@@ -158,7 +165,7 @@
             </div> 
         </div>
     </div>
-
+  
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/popper.min.js"></script>
@@ -166,9 +173,12 @@
     {{-- <script src="/js/jquery.tinymce.min.js"></script> --}}
     <script src="{{ asset('/vendor/laravelLikeComment/js/script.js') }}" type="text/javascript"></script>
     <script src="/js/main.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
 
 </body>
+@include('layouts.preloader')
+
 
 </html>

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Question;
+use App\User;
 use App\QuestionCategory;
 use Illuminate\Http\Request;
+use App\Category;
 
 class QuestionController extends Controller
 {
@@ -83,10 +85,55 @@ class QuestionController extends Controller
      * @param  \App\Question  $question
      * @return \Illuminate\Http\Response
      */
-    public function edit(Question $question)
+    public function edit($id, QuestionCategory $category)
     {
-        //
+        //$id=$question->id;
+        
+        $questionCategories = QuestionCategory::latest()->get();
+        $question = Question::find($id);
+        $category_id= $question->category_id;
+        $category = QuestionCategory::find($category_id);
+        return view('question.edit', compact('question','category','questionCategories', 'id'));
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  
+     * @param \Illuminate\Http\Question
+     * @param \Illuminate\Http\User
+     * @return \Illuminate\Http\Response
+     */
+    public function updateQuestion($id, Request $request)
+    {
+        $questionCategories = QuestionCategory::latest()->get();
+        //$question=Question::find($id);
+       // $datasets=Dataset::where('user_id', $user->id)->get();
+        $user_id=auth()->user()->id;
+        //$id=$question->id;
+        Question::where('id',$id)->update([
+            'id'=> request('id'),
+            'category_id' => request('category_id'),
+            
+            
+            'user_id'=> $user_id,
+            'title' =>  request('title'),
+            'description' => request('description'),
+            
+        ]);
+        
+        
+        return redirect()->route('profile.show', ['auth()->user()->id'=>$user_id]);
+        //return view('profile', compact('user','questions', 'datasets'));
+    }
+
+    public function deleteQuestion($id) {
+        $user_id=auth()->user()->id;
+        $question = Question::find($id);
+        $question->delete();
+        return redirect()->route('profile.show', ['auth()->user()->id'=>$user_id]);
+    }
+
 
     /**
      * Update the specified resource in storage.
@@ -95,10 +142,18 @@ class QuestionController extends Controller
      * @param  \App\Question  $question
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Question $question)
-    {
-        //
-    }
+    // public function update(Request $request, $id)
+    // {   
+    //     $user_id= auth()->user()->id;
+    //     //$questionCategories = QuestionCategory::latest()->get();
+    //     $question = Question::find($id);
+       
+    //     //dd('question');
+                
+    //     return redirect()->route('profile/{user}', ['auth()->user()->id'=>$user_id]);
+
+
+    // }
 
     /**
      * Remove the specified resource from storage.

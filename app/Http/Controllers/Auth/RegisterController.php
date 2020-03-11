@@ -60,6 +60,8 @@ class RegisterController extends Controller
      *
      * @param  array  $data
      * @return \App\User
+     * @return \App\Edit
+     * 
      */
     protected function create(array $data)
     {
@@ -68,5 +70,6 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
     }
 }

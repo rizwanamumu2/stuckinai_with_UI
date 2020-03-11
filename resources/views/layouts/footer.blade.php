@@ -4,14 +4,7 @@
         <div class="footer-content">
             <div class="container">
                 <div class="row clearfix">
-                    <div class="col-md-8 col-md-offset-2">
-                            <div class="footer-content text-center no-padding margin-bottom-40">
-                                <div class="logo-footer"><img id="logo-footer" class="center-block" src="css/logo.png" alt="">
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus illo vel dolorum soluta consectetur doloribus sit. Delectus non tenetur odit dicta vitae debitis suscipit doloribus. Lorem ipsum dolor sit amet, illo vel.</p>
-                            </div>
-                    </div>
-                   
+                                      
                     <!--Two 4th column-->
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="row clearfix">

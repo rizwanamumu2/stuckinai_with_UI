@@ -1,18 +1,8 @@
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3  bg-white border-bottom box-shadow" >
     <h5 class="my-0 mr-md-auto font-weight-normal"><a id="logo" style="text-decoration:none;" href="/">StuckInAI</a></h5>
     <nav class="my-2 my-md-0 mr-md-3">
-        <form role="form" id="form-buscar">
-            <div class="form-group">
-                <div class="input-group">
-                    <input id="1" class="form-control" type="text" name="search" placeholder="Search..." required />
-                    <span class="input-group-btn">
-                        <button class="btn btn-success" type="submit">
-                            <i class="glyphicon glyphicon-search" aria-hidden="true"></i> Search
-                        </button>
-                    </span>
-                </div>
-            </div>
-        </form>
+        {{-- search form --}}
+        @include('layouts.search')
     </nav>
     <nav class="my-2 my-md-0 mr-md-3" id="nav">
         <a class="p-2 " href="/question/create">Ask Question</a>
@@ -25,7 +15,7 @@
     @else
         <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                <img width="25" class="profile-image" src="/default/avatar.png" alt="">
+                <img width="25" class="profile-image" src="{{asset('uploads/avatars')}}/{{Auth::user()->avatar}}" alt="">
             </a>
             
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

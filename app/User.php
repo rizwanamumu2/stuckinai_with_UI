@@ -2,11 +2,13 @@
 
 namespace App;
 
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends \TCG\Voyager\Models\User
+class User extends \TCG\Voyager\Models\User implements Searchable
 {
     use Notifiable;
 
@@ -53,6 +55,7 @@ class User extends \TCG\Voyager\Models\User
             'avatar' => 'gravatar',  // Default avatar
             'admin'  => $user->role === 'admin', // bool
         ];
+
     }
 
     public function questions()
@@ -63,4 +66,32 @@ class User extends \TCG\Voyager\Models\User
     {
         return $this->hasOne(Category::class);
     }
+    public function edit()
+    {
+        return $this->hasOne(Edit::class);
+    }
+    public function image()
+    {
+        return $this->hasOne(Image::class);
+    }
+    public function datasets()
+    {
+        return $this->hasOne(Dataset::class);
+    }
+
+    public function qcategories()
+    {
+        return $this->hasOne(QuestionCategory::class);
+    }
+
+    public function getSearchResult(): SearchResult
+    {
+       $url = route('profile.show', $this->id);
+       return new \Spatie\Searchable\SearchResult(
+           $this,
+           $this->name,
+           $url
+       );
+    }
+     
 }

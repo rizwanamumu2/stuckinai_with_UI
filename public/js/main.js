@@ -1,5 +1,19 @@
 jQuery(document).ready(function() {
   
+    /* ======= Page preloader ======= */
+    $(document).ready(function() {
+      //Preloader
+      preloaderFadeOutTime = 1000;
+      function hidePreloader() {
+      var preloader = $('.spinner_wrapper');
+      preloader.delay(preloaderFadeOutTime);
+      preloader.fadeOut(preloaderFadeOutTime);
+      }
+      hidePreloader();
+      });
+
+
+ 
     btn = $('#back-top');
  
    $(window).scroll(function() {
@@ -57,14 +71,30 @@ jQuery(document).ready(function() {
      }
      $('body').removeClass('expand-all');
                                  
- });		
- 
  });
  
  
- 
- 
- 
- 
-     
-                         
+
+
+ function browserSupportsCSSProperty(propertyName) {
+  var elm = document.createElement('div');
+  propertyName = propertyName.toLowerCase();
+
+  if (elm.style[propertyName] != undefined)
+    return true;
+
+  var propertyNameCapital = propertyName.charAt(0).toUpperCase() + propertyName.substr(1),
+    domPrefixes = 'Webkit Moz ms O'.split(' ');
+
+  for (var i = 0; i < domPrefixes.length; i++) {
+    if (elm.style[domPrefixes[i] + propertyNameCapital] != undefined)
+      return true;
+  }
+
+  return false;
+}
+
+if (!browserSupportsCSSProperty('animation')) {
+  // fallback…
+}
+});
