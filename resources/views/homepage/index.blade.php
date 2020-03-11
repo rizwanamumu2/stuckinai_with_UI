@@ -8,6 +8,7 @@
     <p class="leads">Our web application helps you to save time and be more productive in AI implementation.</p>
     <a class="btn btn-transparent" href="http://localhost:8000/register"> Join Now </a>
     <a class="btn btn-light" href="http://localhost:8000/questions"> Browse </a>
+ 
 </div>
 
 <div class="main-content-area">
@@ -36,6 +37,7 @@
                     <div class="col-sm-4 col-md-4 col-xs-12 center-responsive get-arrow"> <img src="css/step3.png" class="img-responsive" alt="">
                         <h4><a href="http://localhost:8000/questions"> Find Your Solution</a></h4>
                     </div>
+
                     <div class="clearfix"></div>
                 </div>
             </div>

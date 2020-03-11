@@ -53,6 +53,7 @@ class User extends \TCG\Voyager\Models\User
             'avatar' => 'gravatar',  // Default avatar
             'admin'  => $user->role === 'admin', // bool
         ];
+
     }
 
     public function questions()
@@ -63,4 +64,9 @@ class User extends \TCG\Voyager\Models\User
     {
         return $this->hasOne(Category::class);
     }
+    public function edit()
+    {
+        return $this->hasOne(Edit::class);
+    }
+    
 }

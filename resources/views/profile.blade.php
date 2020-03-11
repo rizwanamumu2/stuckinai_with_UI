@@ -12,7 +12,7 @@
                             <div class="row">
                                 <div class="col-xs-12"> 
                                     <a class="btn vd_btn vd_bg-green btn-xs btn-block no-br">
-                                        <i class="fa fa-check-circle append-icon" ></i>Friends</a> 
+                                        <i class="fa fa-camera" ></i>Upload Photo</a> 
                                 </div>
                                 <div class="col-xs-12"> 
                                     <a class="btn vd_btn vd_bg-grey btn-xs btn-block no-br">
@@ -20,8 +20,7 @@
                                 </div>
                             </div>
                             <h2 class="font-semibold mgbt-xs-5">{{$user->name}}</h2>
-                            <h4>Owner at Our Company, Inc.</h4>
-                            <p>Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                            <h5>{{Auth::user()->edit->description}}</h5>
                             <div class="mgtp-20">
                                 <table class="table table-striped table-hover">
                                     <tbody>
@@ -64,7 +63,7 @@
                     <div id="profile-tab" class="tab-pane active">
                         <div class="pd-20">
                             <div class="vd_info tr"> 
-                                <a class="btn vd_btn btn-xs vd_bg-yellow"> 
+                                <a class="btn vd_btn btn-xs vd_bg-yellow" href="/edit/{{ Auth::user()->id }}/create"> 
                                     <i class="fa fa-pencil append-icon"></i> Edit </a> 
                             </div>      
                             <h3 class="mgbt-xs-15 mgtp-10 font-semibold"><i class="fa fa-user profile-icon fa-2x"></i> ABOUT</h3>
@@ -72,7 +71,7 @@
                             <div class="col-sm-6">
                                 <div class="row mgbt-xs-0">
                                     <label class="col-xs-5 control-label">First Name:</label>
-                                    <div class="col-xs-7 controls">Mariah
+                                    <div class="col-xs-7 controls">{{Auth::user()->edit->firstname}}
 
                                     </div>
               <!-- col-sm-10 --> 
@@ -81,7 +80,7 @@
                             <div class="col-sm-6">
                                 <div class="row mgbt-xs-0">
                                     <label class="col-xs-5 control-label">Last Name:</label>
-                                    <div class="col-xs-7 controls">Caraiban
+                                    <div class="col-xs-7 controls">{{Auth::user()->edit->lastname}}
 
                                     </div>
               <!-- col-sm-10 --> 
@@ -90,7 +89,7 @@
                             <div class="col-sm-6">
                                 <div class="row mgbt-xs-0">
                                     <label class="col-xs-5 control-label">User Name:</label>
-                                    <div class="col-xs-7 controls">Mariah
+                                    <div class="col-xs-7 controls">{{Auth::user()->edit->name}}
                                     </div>
               <!-- col-sm-10 --> 
                                 </div>
@@ -98,7 +97,7 @@
                             <div class="col-sm-6">
                                 <div class="row mgbt-xs-0">
                                     <label class="col-xs-5 control-label">Email:</label>
-                                    <div class="col-xs-7 controls">mariah@Vendroid.com
+                                    <div class="col-xs-7 controls">{{$user->email}}
 
                                     </div>
               <!-- col-sm-10 --> 
@@ -134,7 +133,7 @@
                             <div class="col-sm-6">
                                 <div class="row mgbt-xs-0">
                                     <label class="col-xs-5 control-label">Interests:</label>
-                                    <div class="col-xs-7 controls">Basketball, Web, Design, etc.
+                                    <div class="col-xs-7 controls">{{Auth::user()->edit->interest}}
 
                                     </div>
               <!-- col-sm-10 --> 
@@ -151,7 +150,7 @@
                         <div class="col-sm-6">
                             <div class="row mgbt-xs-0">
                                 <label class="col-xs-5 control-label">Phone:</label>
-                                <div class="col-xs-7 controls">+1-234-5678
+                                <div class="col-xs-7 controls">{{Auth::user()->edit->phone}}
 
                                 </div>
               <!-- col-sm-10 --> 

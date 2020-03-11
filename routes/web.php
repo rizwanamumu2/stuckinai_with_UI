@@ -16,15 +16,20 @@ Route::get('/datasets', 'DatasetController@index');
 Route::get('/dataset/create', 'DatasetController@create');
 Route::post('/datasets', 'DatasetController@store');
 Route::get('/download/{file}', 'DatasetController@download');
-
-
 Route::get('/questions', 'QuestionController@index');
 Route::get('/question/create', 'QuestionController@create');
 Route::post('/question/store', 'QuestionController@store');
 Route::get('/question/{question}', 'QuestionController@show');
 Route::get('/question/{question}', 'QuestionController@show');
-Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');;
+Route::get('/location', 'LocationController@show');
+Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
+Route::get('/edit/{user}/create', 'EditController@create');
+Route::post('/edit/store', 'EditController@store');
+//Route::get('/profile/{user}/updated', 'ProfileController@index');
 
+
+// Route::get('/user/{user}',  ['as' => 'user.edit', 'uses' => 'UserController@edit']);
+// Route::patch('/profile/{user}/update',  ['as' => 'user.update', 'uses' => 'UserController@update']);
 
 Auth::routes();
 

@@ -678,7 +678,7 @@ border-radius: 2px;
 
 
 #pro-h .tabs .nav-tabs {
-  background-color: #1fae66;
+  background-color: #be161e;
 border-bottom: none;
 }
 
@@ -1015,7 +1015,7 @@ text-align: center;
 font-size: 14px;
 }
 .vd_green {
-color: #1fae66 !important;
+color: #be161e !important;
 }
 
 #pro-h .col-sm-3 {
@@ -1023,7 +1023,7 @@ width: 25%;
 }
 
 .panel-bd-top {
-border-top: 3px solid #1fae66;
+border-top: 3px solid #be161e;
 }
 
 #pro-h .vd_info-parent img{
@@ -1032,7 +1032,7 @@ vertical-align: middle;
 border: 0;
 }
 .vd_bg-green {
-background-color: #1fae66 !important;
+background-color: #be161e !important;
 }
 .no-br {
 -webkit-border-radius: 0;
@@ -1087,7 +1087,7 @@ bottom: 0;
 opacity: 0.75;
 }
 #pro-h .vd_back-top {
-background: none repeat scroll 0 0 #1FAE66;
+background: none repeat scroll 0 0 #be161e;
 bottom: -30px;
 color: #FFFFFF;
 font-size: 32px;
@@ -1112,7 +1112,7 @@ opacity: 1;
 visibility: hidden;
 }
 .vd_back-top {
-background: none repeat scroll 0 0 #1FAE66;
+background: none repeat scroll 0 0 #be161e;
 bottom: -30px;
 color: #FFFFFF;
 font-size: 32px;
@@ -1210,6 +1210,13 @@ display: none;
 background-color: #FFF;
 -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-border-top: 3px solid #1fae66;
+border-top: 3px solid #be161e;
 z-index: 5;
+}
+
+
+/*--------Edit Layout----------*/
+
+#edit{
+  width: 50%;
 }
