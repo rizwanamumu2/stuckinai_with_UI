@@ -61,7 +61,10 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      * @return \App\Edit
+<<<<<<< HEAD
      * 
+=======
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
      */
     protected function create(array $data)
     {

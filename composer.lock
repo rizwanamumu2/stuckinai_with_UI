@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "cdc4ff7930c2ce2659f586a5da433970",
+=======
+    "content-hash": "c2b995a54844bc845d3f22da81f5c21c",
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -1552,6 +1556,7 @@
         },
         {
             "name": "larapack/hooks",
+<<<<<<< HEAD
             "version": "v1.0.12",
             "source": {
                 "type": "git",
@@ -1566,6 +1571,22 @@
             },
             "require": {
                 "composer/composer": ">=1.4"
+=======
+            "version": "v1.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/larapack/hooks.git",
+                "reference": "aefee5475d71734bbef5f593c3298d693ce77791"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/larapack/hooks/zipball/aefee5475d71734bbef5f593c3298d693ce77791",
+                "reference": "aefee5475d71734bbef5f593c3298d693ce77791",
+                "shasum": ""
+            },
+            "require": {
+                "composer/composer": ">=1.4|1.10.0-RC"
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
             },
             "require-dev": {
                 "orchestra/testbench": ">=3.0",
@@ -1593,7 +1614,11 @@
                 "hooks",
                 "laravel"
             ],
+<<<<<<< HEAD
             "time": "2020-03-10T13:15:02+00:00"
+=======
+            "time": "2020-03-09T17:20:13+00:00"
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
         },
         {
             "name": "larapack/voyager-hooks",
@@ -3732,7 +3757,11 @@
         },
         {
             "name": "symfony/filesystem",
+<<<<<<< HEAD
             "version": "v5.0.5",
+=======
+            "version": "v4.4.5",
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",

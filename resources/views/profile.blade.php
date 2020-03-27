@@ -8,6 +8,7 @@
             <div class="panel widget light-widget panel-bd-top">
                 <div class="panel-heading no-title"> </div>
                     <div class="panel-body">
+<<<<<<< HEAD
                         
                         <div class="text-center vd_info-parent"> 
                             <img alt="example image" style="width:100%" src="{{asset('uploads/avatars')}}/{{Auth::user()->avatar}}"> 
@@ -21,6 +22,44 @@
                             <div class="col-xs-12"> 
                                 <a class="btn vd_btn vd_bg-grey btn-xs btn-block no-br">
                                     <i class="fa fa-envelope append-icon"></i>Send Message</a> 
+=======
+                        <div class="text-center vd_info-parent"> <img alt="example image" src="\css\avatar.jpg"> </div>
+                            <div class="row">
+                                <div class="col-xs-12"> 
+                                    <a class="btn vd_btn vd_bg-green btn-xs btn-block no-br">
+                                        <i class="fa fa-camera" ></i>Upload Photo</a> 
+                                </div>
+                                <div class="col-xs-12"> 
+                                    <a class="btn vd_btn vd_bg-grey btn-xs btn-block no-br">
+                                        <i class="fa fa-envelope append-icon"></i>Send Message</a> 
+                                </div>
+                            </div>
+                            <h2 class="font-semibold mgbt-xs-5">{{$user->name}}</h2>
+                            <h5>{{Auth::user()->edit->description}}</h5>
+                            <div class="mgtp-20">
+                                <table class="table table-striped table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:60%;">Status</td>
+                                            <td><span class="label label-success">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>User Rating</td>
+                                            <td>
+                                                <i class="fa fa-star vd_yellow fa-fw"></i>
+                                                <i class="fa fa-star vd_yellow fa-fw"></i>
+                                                <i class="fa fa-star vd_yellow fa-fw"></i>
+                                                <i class="fa fa-star vd_yellow fa-fw"></i>
+                                                <i class="fa fa-star vd_yellow fa-fw"></i>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Member Since</td>
+                                            <td> Jan 07, 2014 </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
                             </div>
                         </div>
                         <h2 class="font-semibold mgbt-xs-5">{{Auth::user()->name}}</h2>
@@ -58,6 +97,7 @@
                             </table>
                         </div>
                     </div>
+<<<<<<< HEAD
                 </div>
                 <!-- panel widget -->      
             </div>
@@ -93,6 +133,42 @@
                                                     </div>
                                                 @endif
                                             @endif
+=======
+                <!-- panel widget -->
+                 
+        </div>
+        <div class="col-sm-9">
+            <div class="tabs widget">
+                <ul class="nav nav-tabs widget" id="pro-nav">
+                    <li class="active"> <a data-toggle="tab" href="#profile-tab"> Profile <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
+                    <li> <a data-toggle="tab" href="#projects-tab"> Projects <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>    
+                    <li> <a data-toggle="tab" href="#photos-tab"> Photos <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
+                    <li> <a data-toggle="tab" href="#friends-tab"> Friends <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
+                    <li> <a data-toggle="tab" href="#groups-tab"> Groups <span class="menu-active"><i class="fa fa-caret-up"></i></span> </a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="profile-tab" class="tab-pane active">
+                        <div class="pd-20">
+                            <div class="vd_info tr"> 
+                                <a class="btn vd_btn btn-xs vd_bg-yellow" href="/edit/{{ Auth::user()->id }}/create"> 
+                                    <i class="fa fa-pencil append-icon"></i> Edit </a> 
+                            </div>      
+                            <h3 class="mgbt-xs-15 mgtp-10 font-semibold"><i class="fa fa-user profile-icon fa-2x"></i> ABOUT</h3>
+                            <div class="row">
+                            <div class="col-sm-6">
+                                <div class="row mgbt-xs-0">
+                                    <label class="col-xs-5 control-label">First Name:</label>
+                                    <div class="col-xs-7 controls">{{Auth::user()->edit->firstname}}
+
+                                    </div>
+              <!-- col-sm-10 --> 
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row mgbt-xs-0">
+                                    <label class="col-xs-5 control-label">Last Name:</label>
+                                    <div class="col-xs-7 controls">{{Auth::user()->edit->lastname}}
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
 
               <!-- col-sm-10 -->    
                                         </div>
@@ -113,13 +189,31 @@
                                             @endif
                                         @endif
               <!-- col-sm-10 --> 
+<<<<<<< HEAD
+=======
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row mgbt-xs-0">
+                                    <label class="col-xs-5 control-label">User Name:</label>
+                                    <div class="col-xs-7 controls">{{Auth::user()->edit->name}}
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
                                     </div>
                                 </div>
+<<<<<<< HEAD
                                 <div class="col-sm-6">
                                     <div class="row mgbt-xs-0">
                                         <label class="col-xs-5 control-label ">User Name:</label>
                                         <div class="col-xs-7 controls">{{Auth::user()->name}}</div>
               <!-- col-sm-10 -->     
+=======
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row mgbt-xs-0">
+                                    <label class="col-xs-5 control-label">Email:</label>
+                                    <div class="col-xs-7 controls">{{$user->email}}
+
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -181,12 +275,20 @@
                                         @endif
                                     </div>
                                 </div>
+<<<<<<< HEAD
                                 <div class="col-sm-6">
                                     <div class="row mgbt-xs-0">
                                         @if(Auth::user()->edit != null) 
                                             @if(Auth::user()->edit->interest === null)    
                                                 <label class="col-xs-5 control-label text-muted">Interests:</label>
                                                 <div class="col-xs-7 controls">
+=======
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row mgbt-xs-0">
+                                    <label class="col-xs-5 control-label">Interests:</label>
+                                    <div class="col-xs-7 controls">{{Auth::user()->edit->interest}}
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
 
                                                 </div>
                                             @else
@@ -199,6 +301,7 @@
               <!-- col-sm-10 --> 
                                     </div>
                                 </div>
+<<<<<<< HEAD
                             
                                 <div class="col-sm-6">
                                     <div class="row mgbt-xs-0">
@@ -215,6 +318,22 @@
                                             @endif
                                         @endif
                                     </div>
+=======
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row mgbt-xs-0">
+                                <label class="col-xs-5 control-label">Website:</label>
+                                <div class="col-xs-7 controls"><a href="http://Vendroid.venmond.com">Vendroid.venmond.com</a>
+                                </div>
+              <!-- col-sm-10 --> 
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row mgbt-xs-0">
+                                <label class="col-xs-5 control-label">Phone:</label>
+                                <div class="col-xs-7 controls">{{Auth::user()->edit->phone}}
+
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
                                 </div>
                             </div>
                                                          

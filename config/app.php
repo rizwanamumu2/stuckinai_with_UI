@@ -161,7 +161,11 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+<<<<<<< HEAD
         Intervention\Image\ImageServiceProvider::class,
+=======
+       
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
         
         /*
          * Package Service Providers...
@@ -226,7 +230,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
         'Image' => Intervention\Image\Facades\Image::class,
+=======
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
         
         
     ],

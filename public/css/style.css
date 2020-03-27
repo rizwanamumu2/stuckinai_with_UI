@@ -1318,6 +1318,7 @@ border-top: 3px solid #be161e;
 z-index: 5;
 }
 
+<<<<<<< HEAD
 .widget:before, .widget:after {
   content: " ";
   display: table;
@@ -1998,4 +1999,11 @@ section#carouselExampleIndicators {
 
 .container {
   position: relative;
+=======
+
+/*--------Edit Layout----------*/
+
+#edit{
+  width: 50%;
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
 }

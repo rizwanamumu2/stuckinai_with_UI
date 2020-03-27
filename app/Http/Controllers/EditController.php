@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use App\Question;
 use App\Dataset;
+=======
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
 use App\User;
 use App\Edit;
 
@@ -24,16 +27,34 @@ class EditController extends Controller
     /**
      * Display a listing of the resource.
      *
+<<<<<<< HEAD
      
+=======
+     * @return \Illuminate\Http\Response
+     */
+    // public function index(User $user)
+    // {
+    //     $questions = Edit::latest()->get();
+
+    //     return view('Profile.index', compact('user'));
+    // }
+
+    /**
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
      * Show the form for creating a new resource.
      * @param  \Illuminate\Http\Request  $request
      * @param \Illuminate\Http\Edit
      * @param \Illuminate\Http\User
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function create(User $user, Edit $edit)
     {   
          
+=======
+    public function create(User $user)
+    {
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
         return view('edit', compact('user'));
     }
 
@@ -45,6 +66,7 @@ class EditController extends Controller
      * @param \Illuminate\Http\User
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function store(Request $request, User $user, Edit $edit)
     {
 
@@ -80,6 +102,26 @@ class EditController extends Controller
         
         return redirect()->route('profile.show', ['auth()->user()->id'=>$user_id]);
         //return view('profile', compact('user','questions', 'datasets'));
+=======
+    public function store(Request $request, User $user)
+    {
+        // return $request;
+        $edit = new Edit;
+
+        $edit->firstname = $request->firstname;
+        $edit->lastname = $request->lastname;
+        $edit->user_id = auth()->user()->id;
+        $edit->name = auth()->user()->name;
+        $edit->phone = $request->phone;
+        $edit->description = $request->description;
+        $edit->gender = $request->gender;
+        $edit->dob = $request->dob;
+        $edit->interest = $request->interest;
+        
+
+        $edit->save();
+        return view('profile', compact('user'));
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
     }
 
     /**
@@ -103,7 +145,11 @@ class EditController extends Controller
      * @param  \App\Question  $question
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function edit(Edit $edit)
+=======
+    public function edit(Question $question)
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
     {
         //
     }
@@ -115,7 +161,11 @@ class EditController extends Controller
      * @param  \App\Question  $question
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function update(Request $request)
+=======
+    public function update(Request $request, Question $question)
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
     {
         //
     }
@@ -131,6 +181,7 @@ class EditController extends Controller
         //
     }
 
+<<<<<<< HEAD
     public function getImageAttribute()
     {
         return $this->profile_image;
@@ -138,4 +189,95 @@ class EditController extends Controller
 
 
 
+=======
+
+
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+    // public function index(\App\User $user)
+    // {
+    //     return view('edit', compact('user'));
+    // }
+
+    // protected function create(array $edit)
+    // {
+    //     return User::create([
+    //         'firstname' => $edit['firstname'],
+    //         'lastname' => $edit['lastname'],
+            
+    //     ]);
+    // }
+    
+    // public function update(Request $request)
+
+    // {
+    //     $user = Auth::user();
+    
+                
+    
+    //     $this->validate($request,[
+    
+    //         'firstname' => 'max:255',
+    
+    //         'lastname' => 'max:255'
+    
+    //     ]);
+    
+            
+    //     $user->firstname = $request->firstname;
+    
+    //     $user->lastname = $request->lastname;
+    
+                 
+    
+    //     /*if($request->password){
+    
+               
+    
+    //         $this->validate($request,[
+    
+    //             'password' => 'min:6|confirmed',
+    
+    //         ]);
+    
+                  
+    
+    //         $user->password = bcrypt($request->password);
+    
+    //     }*/
+    
+                 
+    
+    //     if($request->hasFile('profileImg')){
+    
+              
+    
+    //         $this->validate($request,[
+    
+    //             'profileImg' =>  'mimes:png',
+    
+    //         ]);
+    
+    //         $profileName = $user->id.'_avatar'.time().'.'.request()->profile->getClientOriginalExtension();
+    
+    //         $request->profile->storeAs('avatars',$profileName);
+    
+            
+    
+    //         $user->profile = $profileName;
+    
+    //     }
+    
+        
+    
+    //     $user->save();
+    
+        
+    
+    //     return view('profile', array('user' => Auth::user()));
+    
+    // }
+>>>>>>> 7ce04a357879d12207460ad9acf6a6cdb425ebbb
 }
